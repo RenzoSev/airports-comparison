@@ -24,7 +24,7 @@ function GoogleMaps({ airport1, airport2 }: GoogleMapsProps) {
         import.meta.env.VITE_GOOGLE_MAPS_API_KEY
       }&origin=${airport1.lat},${airport1.long}&destination=${airport2.lat},${
         airport2.long
-      }&avoid=tolls|highways`}
+      }&mode=flying`}
       allowFullScreen
     ></iframe>
   );
