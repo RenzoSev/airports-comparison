@@ -53,6 +53,12 @@ function AirportsAutoComplete({
         '#airports-select': {
           color: '#e2e8f0',
         },
+        '#airports-select-label': {
+          color: '#e2e8f0',
+        },
+        '#airports-select-label::placeholder': {
+          color: '#e2e8f0',
+        },
       }}
     />
   );

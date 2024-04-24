@@ -37,6 +37,12 @@ export default function CountrySelect({
         '#country-select': {
           color: '#e2e8f0',
         },
+        '#country-select-label': {
+          color: '#e2e8f0 !important',
+        },
+        '#country-select-label::placeholder': {
+          color: '#e2e8f0 !important',
+        },
       }}
       options={countries}
       autoHighlight
