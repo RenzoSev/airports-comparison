@@ -1,14 +1,8 @@
-import { AirportDocument } from '../airport/service';
+import { Coordinates } from '../coordinates/converter';
 
 interface GoogleMapsProps {
-  airport1: {
-    lat: AirportDocument['latitude'];
-    long: AirportDocument['longitude'];
-  };
-  airport2: {
-    lat: AirportDocument['latitude'];
-    long: AirportDocument['longitude'];
-  };
+  airport1: Coordinates;
+  airport2: Coordinates;
 }
 
 function GoogleMaps({ airport1, airport2 }: GoogleMapsProps) {
@@ -22,8 +16,8 @@ function GoogleMaps({ airport1, airport2 }: GoogleMapsProps) {
       referrerPolicy="no-referrer-when-downgrade"
       src={`https://www.google.com/maps/embed/v1/directions?key=${
         import.meta.env.VITE_GOOGLE_MAPS_API_KEY
-      }&origin=${airport1.lat},${airport1.long}&destination=${airport2.lat},${
-        airport2.long
+      }&origin=${airport1.lat},${airport1.lon}&destination=${airport2.lat},${
+        airport2.lon
       }&mode=flying`}
       allowFullScreen
     ></iframe>
